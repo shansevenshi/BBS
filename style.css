@@ -1,0 +1,169 @@
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #f4f4f4, #e4e4e4);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; /* 动态背景效果 */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* 确保内容在烟花之上 */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 背景半透明 */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4A90E2; /* 论坛标题颜色 */
+    animation: blink 1s infinite; /* 闪烁效果 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 添加文字阴影 */
+}
+
+h2 {
+    color: #333; /* 二级标题颜色 */
+}
+
+/* 弹出词语样式 */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* 初始隐藏 */
+    z-index: 10; /* 确保在前面 */
+}
+
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.word {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.word:hover {
+    background-color: #E94E77; /* 鼠标悬停颜色 */
+}
+
+/* 文章推荐样式 */
+.day-message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 新增内容样式 */
+.additional-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h3 {
+    margin-top: 0;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* 消息样式 */
+.message {
+    color: red; /* 错误消息颜色 */
+    opacity: 0; /* 初始透明 */
+    transition: opacity 1s; /* 过渡效果 */
+}
+
+/* 导航样式 */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4A90E2; /* 链接颜色 */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* 添加缩放效果 */
+}
+
+ul li a:hover {
+    color: #E94E77; /* 鼠标悬停颜色 */
+    transform: scale(1.1); /* 放大效果 */
+}
+
+/* 闪烁效果 */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* 动态背景效果 */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* 按钮样式 */
+button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+}
+
+button:hover {
+    background-color: #E94E77; /* 鼠标悬停时变色 */
+    transform: scale(1.05); /* 鼠标悬停时轻微放大 */
+}
